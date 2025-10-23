@@ -6,10 +6,8 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 /**
  * 动态文件生成
@@ -58,9 +56,10 @@ public class DynamicGenerator {
 //        mainTemplateConfig.setLoop(false);
 //        mainTemplateConfig.setOutputText("输出信息为");
 
-        //生成
-        Writer out = new FileWriter(outputPath);
+        //生成,要与freemarkder的输出流编码一致
+        Writer out = new OutputStreamWriter(new FileOutputStream(outputPath), StandardCharsets.UTF_8);
         template.process(model, out);
+
 
         //关闭
         out.close();
