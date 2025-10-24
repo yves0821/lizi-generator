@@ -1,0 +1,23 @@
+// 获取当前项目的根目录路径
+System.getProperty("user.dir");
+// 获取当前项目的父目录
+new File(projectPath).getParentFile();
+// 构建模板文件的完整输入路径
+new File(parentFile, "yuzi-generator-demo-projects/acm-template").getAbsolutePath();
+
+拷贝文件夹
+Files.copy(src.toPath(), dest.toPath(), optionList.toArray(new CopyOption[0]));
+创建多级文件夹(哪怕中间文件不存在)
+File dest;
+dest.mkdirs()
+判断是否为目录
+File dest;
+dest.isDirectory()
+判断文件是否存在
+File dest;
+dest.exists()
+
+父路径.resolve(子路径)
+
+toPath() 方法将 File 对象转换为 Path 对象
+Path 是 NIO.2 中替代 File 的现代文件路径表示方式
