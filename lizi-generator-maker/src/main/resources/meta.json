@@ -6,8 +6,9 @@
   "author": "lizi",
   "createTime": "2023-11-22",
   "fileConfig": {
-    "inputRootPath": "E:/develop/Javacode/lizi-generator/lizi-generator-demo-projects/acm-template-pro-generator",
+    "inputRootPath": ".source/acm-template-pro",
     "outputRootPath": "generated",
+    "sourceRootPath": "E:/develop/Javacode/lizi-generator/lizi-generator-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [
       {
