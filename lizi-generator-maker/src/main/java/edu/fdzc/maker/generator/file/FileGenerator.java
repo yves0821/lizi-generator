@@ -1,7 +1,6 @@
 package edu.fdzc.maker.generator.file;
 
 
-import edu.fdzc.maker.model.Datamodel;
 import freemarker.template.TemplateException;
 
 import java.io.File;
@@ -37,12 +36,5 @@ public class FileGenerator {
         DynamicFileGenerator.doGenerate(inputDynamicPath, outputDynamicPath, model);
     }
 
-    public static void main(String[] args) throws TemplateException, IOException {
-        Datamodel datamodel = new Datamodel();
-        datamodel.setAuthor("lizi");
-        datamodel.setLoop(true);
-        datamodel.setOutputText("输出信息为");
-        doGenerate(datamodel);
-    }
 }
 
